@@ -116,9 +116,10 @@ def cross_validate_model(parallel_corpus, k=4):
     return np.mean(scores)
 
 def main():
-    parallel_corpus = read_lexicon('small.txt')
+    parallel_corpus = read_lexicon('ms_en.txt')
     avg_cv_score = cross_validate_model(parallel_corpus, k=4)
     print("\nFinal average cross-validation score:", avg_cv_score)
 
 if __name__ == "__main__":
     main()
+
